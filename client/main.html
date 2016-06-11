@@ -1,0 +1,26 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+
+{{> sample }}
+
+</body>
+
+<template name="sample">
+
+  <h3> Welcome {{user}} to this workshop </h3>
+
+  <form id="playerForm">
+    <input type="text" id="playerName" />
+    <button type="submit" >Save</button>
+  </form>
+
+  {{#each list}}
+  <li>{{@index}}<b> {{name}} </b> </li>
+  {{/each}}
+
+
+</template>
+
