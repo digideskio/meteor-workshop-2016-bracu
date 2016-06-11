@@ -18,11 +18,13 @@ Template.sample.events({
   'submit #playerForm' : function(event, template) {
     event.preventDefault();
     var player = $('#playerName').val();
+    var age = $('#age').val();
 
     console.log(player);
 
     Players.insert({
-      name: player
+      name: player,
+      age: age
     });
   }
 });

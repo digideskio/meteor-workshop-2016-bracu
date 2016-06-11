@@ -13,12 +13,13 @@
   <h3> Welcome {{user}} to this workshop </h3>
 
   <form id="playerForm">
-    <input type="text" id="playerName" />
+    <input type="text" id="playerName" /> <br>
+    <input type="text" id="age" /> <br>
     <button type="submit" >Save</button>
   </form>
 
   {{#each list}}
-  <li>{{@index}}<b> {{name}} </b> </li>
+  <li>{{@index}}<b> {{name}} : {{age}} </b> </li>
   {{/each}}
 
 
