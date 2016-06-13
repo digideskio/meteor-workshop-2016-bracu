@@ -26,6 +26,11 @@ Template.sample.events({
       name: player,
       age: age
     });
+  },
+  'click .removePlayer': function(){
+    console.log(this);
+    
+    Players.remove({_id: this._id });
   }
 });
 

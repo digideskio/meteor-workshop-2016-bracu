@@ -3,6 +3,8 @@
 </head>
 
 <body>
+  {{> loginButtons}}
+  <hr />
 
 {{> sample }}
 
@@ -18,9 +20,14 @@
     <button type="submit" >Save</button>
   </form>
 
-  {{#each list}}
-  <li>{{@index}}<b> {{name}} : {{age}} </b> </li>
-  {{/each}}
+  {{#if currentUser}}
+    {{#each list}}
+    <li>{{@index}}<b> {{name}} : {{age}} </b>
+      <button class="removePlayer" > Remove</button>
+    </li> <br/>
+    {{/each}}
+
+  {{/if}}
 
 
 </template>
